@@ -14,7 +14,6 @@ export default function Home() {
     "HTML",
     "Node",
     "Mongo",
-    "",
   ];
   const { scroll } = useSpring({
     scroll: (words.length - 1) * 50,
@@ -61,7 +60,7 @@ export default function Home() {
             fontFamily: "Noto Sans medium",
             height: 100,
             // paddingLeft: 300,
-            color: "white",
+            color: "black",
           }}
         >
           {" "}
@@ -72,7 +71,7 @@ export default function Home() {
         style={{
           // position: "absolute",
           border: "1px solid white",
-          color: "white",
+          color: "black",
           right: 200,
           fontFamily: "Questrial",
           bottom: 10,
