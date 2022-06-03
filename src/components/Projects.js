@@ -24,7 +24,10 @@ export default function Project() {
   return (
   <div>
       <div className="profile-box">
-      
+      <div className="bg-dark text-white"style={{margin:"auto",marginTop:"2%"}}>
+            <h1 style={{marginLeft:"1%"}}>My Work :</h1>
+            <div className="container rounded"style={{display:"grid",gridTemplateColumn: "repeat(3,[col-start])"}}>
+            {projects.map(({title, imgLink, imgAlt, deployedLink, gitHubLink, description}) => {
      
       <img src={imgLink} alt={imgAlt} className="card-img-top"></img>
 
