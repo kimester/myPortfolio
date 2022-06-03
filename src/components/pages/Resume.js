@@ -35,7 +35,7 @@ import {
  
   AiOutlineLinkedin,
   
-  AiOutlineImCss3
+ 
 } from "react-icons/ai";
 
 export default function Flip() {
