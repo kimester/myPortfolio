@@ -28,3 +28,8 @@ body {
 .flex.center {
     justify-content: center;
 } */
+
+footer {
+    position: absolute;
+    right: 0;bottom:0;left:0;  
+}

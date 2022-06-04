@@ -29,7 +29,6 @@ export default function Home() {
     <div className="homebox">
       <div
         style={{
-          border: "1px solid white",
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
@@ -38,17 +37,13 @@ export default function Home() {
         }}
       >
         <h1
-          // className="header"
+      
           style={{
             color: "white",
-            // postition: "absolute",
+           
             fontFamily: "Noto Sans medium ",
             fontSize: 50,
-            // height: 300,
-            // width: "50%",
-            // paddingTop: 300,
-            // paddingBottom: 50,
-            // paddingLeft: 300,
+           
           }}
         >
           Hi, I'm Ester
@@ -56,10 +51,10 @@ export default function Home() {
         <h2
           className="header"
           style={{
-            // postition: "absolute",
+            
             fontFamily: "Noto Sans medium",
             height: 100,
-            // paddingLeft: 300,
+          
             color: "black",
           }}
         >
@@ -69,14 +64,14 @@ export default function Home() {
       </div>
       <animated.div
         style={{
-          // position: "absolute",
+         
           border: "1px solid white",
           color: "black",
           right: 200,
           fontFamily: "Questrial",
           bottom: 10,
           top: 350,
-          // width: "50%",
+         
           height: 100,
           overflow: "auto",
           fontSize: "30px",

@@ -17,7 +17,8 @@ const projects = [
     imgAlt: "In My Fridge",
     deployedLink: "https://kimester.github.io/inMyFridge/",
     gitHubLink: "https://github.com/kimester/inMyFridge",
-    description: " ",
+    description:
+      " The Planter is a forum for plant lovers around the world who need help naming their plants. Create an account, browse plants, and help your fellow plant lovers come up with names for their beloved friends. You can post your un-named plant to the board and allow others to suggest names.",
   },
 ];
 
@@ -25,19 +26,26 @@ export default function Project() {
   return (
     <div>
       <div className="profile-box">
-        {/* <div className="bg-dark text-white"style={{margin:"auto",marginTop:"2%"}}>
-            <h1 style={{marginLeft:"1%"}}>My Work :</h1>
-            <div className="container rounded"style={{display:"grid",gridTemplateColumn: "repeat(3,[col-start])"}}>
-            {projects.map(({title, imgLink, imgAlt, deployedLink, gitHubLink, description}) => { */}
-        {projects.map((project, index) => (
-          <img
-            key={index}
-            src={project.imgLink}
-            alt={project.imgAlt}
-            className="card-img-top"
-          />
-        ))}
-        <img src={imgLink} alt={imgAlt} className="card-img-top"></img>
+        {projects.map(
+          (project, index, deployedLink, gitHubLink, description) => (
+            <img
+              key={index}
+              src={project.imgLink}
+              alt={project.imgAlt}
+              className="card-img-top"
+            />
+          )
+        )}
+        <div>
+          <div
+            className="card-body"
+            style={{ textAlign: "center", fontSize: "24px" }}
+          >
+            <a href={deployedLink}>Deployedlink</a>
+            <br />
+            <a href={gitHubLink}>See the Repository</a>
+          </div>
+        </div>
       </div>
     </div>
   );

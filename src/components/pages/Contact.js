@@ -1,55 +1,78 @@
-import React, { useState } from "react";
 
-function Contact() {
-  // Here we set two state variables for firstName and email using `useState`
-  const [firstName, setFirstName] = useState("");
-  const [email, setEmail] = useState("");
+import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
-  const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
-    const { name, value } = e.target;
+export default function Contact() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
-    // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
-    return name === "firstName" ? setFirstName(value) : setEmail(value);
-  };
+    const handleFormSubmit = () => {
+        // Preventing the default behavior of the form submit (which is to refresh the page)
+        if (email && name && message) {
+            const serviceID = "service_5050j57"
+            const templateID = "template_cvumg5r"
+            const publicKey = "qbwqUpBUs14ZJj17h"
+            const templateParams = { name, email, message }
+            emailjs.send(serviceID, templateID, templateParams, publicKey)
+                .then(function (response) {
+                    alert("Your email was successfully sent!");
+                    console.log('SUCCESS!', response.status, response.text);
+                }, function (error) {
+                    console.log('FAILED...', error);
+                });
 
-  const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    e.preventDefault();
+        }
+        //     //clear the inputs
+        setName('');
+        setEmail('');
+        setMessage('');
+    };
 
-    // Alert the user their first and last name, clear the inputs
-    alert(`Hello ${firstName} ${email}`);
-    setFirstName("");
-    setEmail("");
-  };
-
-  return (
-    <div>
-      <h1> Contact Me!</h1>
-      <p>
-        Hello {firstName} {email}
-      </p>
-      <form className="form">
-        <input
-          value={firstName}
-          name="firstName"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="First Name"
-        />
-        <input
-          value={email}
-          name="email"
-          onChange={handleInputChange}
-          type="email"
-          placeholder="email"
-        />
-        <button type="button" onClick={handleFormSubmit}>
-          Submit
-        </button>
-      </form>
-    </div>
-  );
+    return (
+        <div>
+            <h1 className="text-light"style={{marginLeft:"1%",marginTop:"1%"}}>Contact Me:</h1>
+            {/* Review forms in React for this portion. Include an email form with a comment & name section */}
+            <form className="form" 
+            style={{
+                color:'black',
+                display:"flex", 
+                flexDirection:"column",
+                margin:"auto",
+                marginTop:"4%",
+                width:"300%",
+                 justifyContent:"center"
+                 }}
+                 >
+                <input className="text-black"
+                    value={name}
+                    name="name"
+                    onChange={(e) => { setName(e.target.value) }}
+                    type="text"
+                    placeholder="Your Name"
+                />
+                <input className="text-black"
+                    value={email}
+                    name="email"
+                    onChange={(e) => { setEmail(e.target.value) }}
+                    type="email"
+                    placeholder="Your Email"
+                />
+                <textarea className="text-black"
+                    value={message}
+                    name="message"
+                    onChange={(e) => { setMessage(e.target.value) }}
+                    type="text"
+                    placeholder="Your Message"
+                />
+                <br/>
+                <br/>
+                <button style={{alignSelf:"center",width:"80%"}} type="button" onClick={handleFormSubmit}>
+                    Submit
+                </button>
+            </form>
+           
+    
+        </div>
+    );
 }
-
-export default Contact;

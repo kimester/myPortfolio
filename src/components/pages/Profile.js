@@ -3,12 +3,12 @@ import React from 'react';
 import Project from '../Projects'
 
 
-export default function Porfile() {
-  
+export default function Profile() {
+return (
         <div>
-            <Project></Project>\
+            <Project></Project>
             <br/>
             <h3 className="text-light" style={{textAlign:"center"}}>Thanks for visiting</h3>
         </div>
-  
+  )
 }
