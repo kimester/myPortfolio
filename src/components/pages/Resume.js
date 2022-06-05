@@ -1,33 +1,4 @@
-// import React from 'react';
 
-// export default function Resume() {
-//   return (
-//     <div>
-//       <h1
-//       style={{
-//         color:"white",
-//         fontFamily: "Noto Sans medium",
-//         textAlign:'center',
-//       }}
-//       >Resume</h1>
-//       <p
-//       style={{
-//         color:"white",
-//         fontFamily: "Noto Sans medium",
-//         textAlign:'center',
-//       }}
-//       >
-//         Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-//         Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-//         mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-//         lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-//         imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-//         in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-//       </p>
-//     </div>
-
-//   );
-// }
 
 import React, { useState } from "react";
 import {
@@ -39,12 +10,12 @@ import {
 } from "react-icons/ai";
 
 export default function Flip() {
-  const [flip, setflip] = useState(false);
+  const [flipTwo, setflip] = useState(false);
   const [flipOne, setFlipOne] = useState(false);
   const [flipThree, setFlipThree] = useState(false);
 
-  function flipCard() {
-    setflip(!flip);
+  function flipCardOne() {
+    setflip(!flipTwo);
   }
 
   function flipCardTwo() {
@@ -57,8 +28,8 @@ export default function Flip() {
   return (
     <div className="section">
       <div className="card-container">
-        <div className="card" onClick={() => flipCard()}>
-          <div className={`card__inner ${flip ? "is-flipped" : ""}`}>
+        <div className="cardOne" onClick={() => flipCardOne()}>
+          <div className={`card__inner ${flipTwo ? "is-flipped" : ""}`}>
             <div className="card__face card__face--front">
               <h2>ABOUT ME</h2>
             </div>
@@ -116,7 +87,7 @@ export default function Flip() {
                   <h2>Hard Skills</h2>
                 </div>
                 <div className="card__body">
-                  <h3>JavaScript Wizard</h3>
+                  
                   <p> Javascript</p>
                   <p>CSS
                   </p>

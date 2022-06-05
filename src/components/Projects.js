@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 import fridge from "../assets/images/fridge.png";
 import plant from "../assets/images/plant.png";
 import passgen from "../assets/images/passgen.png";
 import workday from "../assets/images/workday.png";
 import employee from "../assets/images/employee.png";
 import note from "../assets/images/note.png";
-
 
 const projects = [
   {
@@ -14,12 +13,13 @@ const projects = [
     imgAlt: "In My Fridge",
     deployedLink: "https://kimester.github.io/inMyFridge/",
     gitHubLink: "https://github.com/kimester/inMyFridge",
-    description: "In my Fridge is a web app that you can use to search recipes based on the ingredients that you have in your fridge. There will be a search for recipes that have as many of the given ingredients as possible and require as few additional ingredients as possible. With the title of each dish you will be able to make a youtube search right on our page.  ",
+    description:
+      "In my Fridge is a web app that you can use to search recipes based on the ingredients that you have in your fridge. There will be a search for recipes that have as many of the given ingredients as possible and require as few additional ingredients as possible. With the title of each dish you will be able to make a youtube search right on our page.  ",
   },
   {
     title: "the Planter",
     imgLink: plant,
-    imgAlt: "In My Fridge",
+    imgAlt: "The planter",
     deployedLink: "https://secret-waters-02737.herokuapp.com/login",
     gitHubLink: "https://github.com/ncfranklin14/the-planter",
     description:
@@ -28,7 +28,7 @@ const projects = [
   {
     title: "Password Generator",
     imgLink: passgen,
-    imgAlt: "In My Fridge",
+    imgAlt: "password generator",
     deployedLink: " https://kimester.github.io/javachip/",
     gitHubLink: "https://github.com/kimester/javachip/",
     description:
@@ -37,7 +37,7 @@ const projects = [
   {
     title: "Work day scheduler",
     imgLink: workday,
-    imgAlt: "In My Fridge",
+    imgAlt: "work day",
     deployedLink: "https://kimester.github.io/workparty/",
     gitHubLink: "https://github.com/kimester/workparty",
     description:
@@ -47,48 +47,61 @@ const projects = [
     title: "Team builder",
     imgLink: employee,
     imgAlt: "Team builder",
+    deployedLink:" https://kimester.github.io/teamProfileGen/",
     gitHubLink: "https://github.com/kimester/teamProfileGen",
     description:
       "A command line application that generates a nice and easy to read page that is based on a series of user inputs",
-  },
-  {
-    title: "Note taker",
-    imgLink: note,
-    imgAlt: "In My Fridge",
-    deployedLink: "https://kimester.github.io/notetaker/",
-    gitHubLink: "https://github.com/kimester/notetaker",
-    description:
-      " An application tha you can use to store notes for yourself or use as a secret diary that nobody will be able to find ",
-  },
+  }
+  
 ];
 
 export default function Project() {
-  
   return (
     <div>
-    <div className="$orange-900 text-white"style={{margin:"auto",marginTop:"1%"}}>
-        
-        <div className="container"style={{height:"200", marginTop:"1000"}}>
-        {projects.map(({title, imgLink, imgAlt, deployedLink, gitHubLink, description}) => {
-        return (
-         
-            <div className="card" key={title} >
-                <img src={imgLink} alt={imgAlt} className="card-img-top"></img>
-                <div className="card-body" >
+      <div>
+        <div
+          className="container fluid"
+          style={{ marginTop: "350vh", height: "100%", display:"grid",gridTemplateColumn: "repeat(3,[col-start])"}}
+        >
+          {projects.map(
+            ({
+              title,
+              imgLink,
+              imgAlt,
+              deployedLink,
+              gitHubLink,
+              description,
+            }) => {
+              return (
+                <div className="card" key={title}>
+                  <img
+                    src={imgLink}
+                    alt={imgAlt}
+                    className="card-img-top"
+                  ></img>
+                  <div className="card-body">
                     <h5 className="card-title text-dark">{title}</h5>
                     <p className="card-text text-dark">{description}</p>
                     <p></p>
-                </div>
-                <div className="card-body" style={{textAlign:"center", fontSize:"24px", fontColor:"black"}}>
+                  </div>
+                  <div
+                    className="card-body"
+                    style={{
+                      textAlign: "center",
+                      fontSize: "24px",
+                      fontColor: "black",
+                    }}
+                  >
                     <a href={deployedLink}>Deployed link</a>
                     <br />
                     <a href={gitHubLink}>See the Repo</a>
+                  </div>
                 </div>
-            </div>
-        )
-    })}
+              );
+            }
+          )}
+        </div>
+      </div>
     </div>
-    </div> 
-    </div>
-)
+  );
 }
