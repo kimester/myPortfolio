@@ -36,6 +36,7 @@ export default function Flip() {
             <div className="card__face card__face--back">
               <div className="card__content">
                 <div className="card__header">
+                <h2>About me</h2>
                   <div>
                     <br></br>
                     <br></br>
@@ -54,7 +55,7 @@ export default function Flip() {
                       style={{
                         color: "darkseagreen",
                         width: 100,
-                        height: 100,
+                        height: 80,
                       }}
                     />
                   </a>
@@ -67,7 +68,7 @@ export default function Flip() {
                       style={{
                         color: "darkseagreen",
                         width: 100,
-                        height: 100,
+                        height: 80,
                       }}
                     />
                   </a>

@@ -4,8 +4,8 @@ import React from 'react';
 // We assign them to their own variable names
 function Nav ({ currentPage, handlePageChange }) {
   return (
-    <ul className="nav justify-content-end">
-      <li className="nav-item">
+    <ul className="nav">
+      <li className="navbar navbar-expand-sm navbar-light bg-light">
         <a
           href="#home"
           onClick={() => handlePageChange('Home')}
