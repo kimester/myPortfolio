@@ -68,7 +68,7 @@ export default function Project() {
     <div>
     <div className="$orange-900 text-white"style={{margin:"auto",marginTop:"1%"}}>
         
-        <div className="container">
+        <div className="container"style={{height:"200", marginTop:"1000"}}>
         {projects.map(({title, imgLink, imgAlt, deployedLink, gitHubLink, description}) => {
         return (
          
