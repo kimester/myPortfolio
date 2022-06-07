@@ -26,8 +26,9 @@ export default function Flip() {
   }
 
   return (
-    <div className="section">
-      <div className="card-container">
+    <div className="section" >
+      <div className="card-container gridTemplateColumn: [linename1 linename2] 100px
+                       repeat(auto-fit, [linename1] 300px) ">
         <div className="cardOne" onClick={() => flipCardOne()}>
           <div className={`card__inner ${flipTwo ? "is-flipped" : ""}`}>
             <div className="card__face card__face--front">

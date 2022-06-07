@@ -1,7 +1,36 @@
+
 body {
   background-image: linear-gradient(to bottom left, rgb(255, 255, 255), rgb(235, 204, 168));
 
 }
+
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .section {
+    flex: 50%;
+  }
+}
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .cardOne,
+  .cardTwo,
+  .cardThree {
+    flex-direction: column;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
 
 .header {
   text-shadow: 1px 1px 2px rgb(105, 75, 29), 0 0 25px rgb(209, 179, 206), 0 0 5px rgb(71, 71, 105);
@@ -20,15 +49,13 @@ body {
 
 .section {
   width: 1600px;
-  height: 2550px;
-  flex-direction: row;
+  height: 7550px;
+  display:flex;
+  flex:wrap;
+  flex-direction: column;
   display: flex;
-  border: 4px solid rgba(255, 3, 3, 0.26);
-  margin-top: 90px;
-  
-  justify-content: flex-start;
-
-
+  border: 4px solid rgba(31, 6, 6, 0.26);
+  margin-top: 0px;
 }
 
 div.main {
@@ -61,7 +88,7 @@ div.main {
 * {
   margin: 0;
   padding: 0;
-  flex-direction: row;
+  
 }
 
 .card-container {
@@ -73,6 +100,7 @@ div.main {
   display: flex;
   margin: 0px;
   justify-content: flex-start;
+  
 }
 
 .cardOne,
@@ -82,7 +110,8 @@ div.main {
   width: 450px;
   height: 600px;
   perspective: 1000px;
-
+  flex: 30%;
+padding:20px;
 }
 
 .card__inner,

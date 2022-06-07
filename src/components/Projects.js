@@ -4,7 +4,7 @@ import plant from "../assets/images/plant.png";
 import passgen from "../assets/images/passgen.png";
 import workday from "../assets/images/workday.png";
 import employee from "../assets/images/employee.png";
-import note from "../assets/images/note.png";
+// import note from "../assets/images/note.png";
 
 const projects = [
   {
