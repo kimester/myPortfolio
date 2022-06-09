@@ -33,13 +33,16 @@ export default function Home() {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          marginRight: "2rem"
+          marginRight: "2rem",
+          marginTop: 500,
+          
         }}
       >
         <h1
       
           style={{
             color: "white",
+            
            
             fontFamily: "Noto Sans medium ",
             fontSize: 50,
@@ -55,7 +58,8 @@ export default function Home() {
             fontFamily: "Noto Sans medium",
             height: 100,
           
-            color: "black",
+            color: "white",
+            textShadow: "grey"
           }}
         >
           {" "}
@@ -64,17 +68,17 @@ export default function Home() {
       </div>
       <animated.div
         style={{
-         
           border: "1px solid white",
           color: "black",
           right: 200,
           fontFamily: "Questrial",
           bottom: 10,
           top: 350,
-         
           height: 100,
           overflow: "auto",
           fontSize: "30px",
+          color:"white",
+marginTop:520,
         }}
         scrollTop={scroll}
       >

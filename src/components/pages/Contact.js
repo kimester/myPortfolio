@@ -10,9 +10,9 @@ export default function Contact() {
     const handleFormSubmit = () => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         if (email && name && message) {
-            const serviceID = "service_5050j57"
-            const templateID = "template_cvumg5r"
-            const publicKey = "qbwqUpBUs14ZJj17h"
+            const serviceID = "service_2bmlaq8"
+            const templateID = "template_2zi5knz"
+            const publicKey = "w5WVSJbF2wkkie5Tp"
             const templateParams = { name, email, message }
             emailjs.send(serviceID, templateID, templateParams, publicKey)
                 .then(function (response) {
@@ -31,17 +31,18 @@ export default function Contact() {
 
     return (
         <div>
-            <h1 className="text-light"style={{marginLeft:"1%",marginTop:"1%"}}>Contact Me:</h1>
+            <h1 className="text-light">Contact Me:</h1>
             {/* Review forms in React for this portion. Include an email form with a comment & name section */}
             <form className="form" 
             style={{
                 color:'black',
                 display:"flex", 
                 flexDirection:"column",
-                margin:"auto",
+                // margin:0,
                 marginTop:"4%",
-                width:"300%",
-                 justifyContent:"center"
+                width:"80%",
+                
+                //  justifyContent:"center"
                  }}
                  >
                 <input className="text-black"

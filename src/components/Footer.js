@@ -8,11 +8,11 @@ export default function Footer() {
         <div id="contact-links">
             
             
-            <div className="">
+            <div className="footericons">
                 <a href="https://github.com/kimester" target="_blank" rel="noreferrer noopener">
                     <AiOutlineGithub
                      style={{
-                        color: "darkseagreen",
+                        color: "grey",
                         width: 100,
                         height: 100,
                       }}
@@ -23,7 +23,7 @@ export default function Footer() {
                 <a href="https://www.linkedin.com/in/ester-e-kim-b28679233/" target="_blank" rel="noreferrer noopener">
                     <AiOutlineLinkedin 
                      style={{
-                        color: "darkseagreen",
+                        color: "grey",
                         width: 100,
                         height: 100,
                       }}

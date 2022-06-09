@@ -4,18 +4,10 @@ import plant from "../assets/images/plant.png";
 import passgen from "../assets/images/passgen.png";
 import workday from "../assets/images/workday.png";
 import employee from "../assets/images/employee.png";
-// import note from "../assets/images/note.png";
+
 
 const projects = [
-  {
-    title: "In My Fridge",
-    imgLink: fridge,
-    imgAlt: "In My Fridge",
-    deployedLink: "https://kimester.github.io/inMyFridge/",
-    gitHubLink: "https://github.com/kimester/inMyFridge",
-    description:
-      "In my Fridge is a web app that you can use to search recipes based on the ingredients that you have in your fridge. There will be a search for recipes that have as many of the given ingredients as possible and require as few additional ingredients as possible. With the title of each dish you will be able to make a youtube search right on our page.  ",
-  },
+  
   {
     title: "the Planter",
     imgLink: plant,
@@ -24,6 +16,15 @@ const projects = [
     gitHubLink: "https://github.com/ncfranklin14/the-planter",
     description:
       " The Planter is a forum for plant lovers around the world who need help naming their plants. Create an account, browse plants, and help your fellow plant lovers come up with names for their beloved friends. You can post your un-named plant to the board and allow others to suggest names.",
+  },
+  {
+    title: "In My Fridge",
+    imgLink: fridge,
+    imgAlt: "In My Fridge",
+    deployedLink: "https://kimester.github.io/inMyFridge/",
+    gitHubLink: "https://github.com/kimester/inMyFridge",
+    description:
+      "In my Fridge is a web app that you can use to search recipes based on the ingredients that you have in your fridge. There will be a search for recipes that have as many of the given ingredients as possible and require as few additional ingredients as possible. With the title of each dish you will be able to make a youtube search right on our page.  ",
   },
   {
     title: "Password Generator",
@@ -61,7 +62,7 @@ export default function Project() {
       <div>
         <div
           className="container fluid"
-          style={{ marginTop: "350vh", height: "100%", display:"grid",gridTemplateColumn: "repeat(3,[col-start])"}}
+          style={{ height: "100%", display:"grid",gridTemplateColumn: "repeat(3,[col-start])"}}
         >
           {projects.map(
             ({

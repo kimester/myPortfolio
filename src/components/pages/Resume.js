@@ -1,13 +1,5 @@
-
-
 import React, { useState } from "react";
-import {
-  AiOutlineGithub,
- 
-  AiOutlineLinkedin,
-  
- 
-} from "react-icons/ai";
+import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
 
 export default function Flip() {
   const [flipTwo, setflip] = useState(false);
@@ -26,9 +18,9 @@ export default function Flip() {
   }
 
   return (
-    <div className="section" >
-      <div className="card-container gridTemplateColumn: [linename1 linename2] 100px
-                       repeat(auto-fit, [linename1] 300px) ">
+    // <div className="section">
+      <div className="card-container ">
+
         <div className="cardOne" onClick={() => flipCardOne()}>
           <div className={`card__inner ${flipTwo ? "is-flipped" : ""}`}>
             <div className="card__face card__face--front">
@@ -37,7 +29,7 @@ export default function Flip() {
             <div className="card__face card__face--back">
               <div className="card__content">
                 <div className="card__header">
-                <h2>About me</h2>
+                  <h2>About me</h2>
                   <div>
                     <br></br>
                     <br></br>
@@ -78,6 +70,7 @@ export default function Flip() {
             </div>
           </div>
         </div>
+
         <div className="cardTwo" onClick={() => flipCardTwo()}>
           <div className={`cardTwo__inner ${flipOne ? "is-flipped" : ""}`}>
             <div className="card__face card__face--front">
@@ -89,10 +82,8 @@ export default function Flip() {
                   <h2>Hard Skills</h2>
                 </div>
                 <div className="card__body">
-                  
                   <p> Javascript</p>
-                  <p>CSS
-                  </p>
+                  <p>CSS</p>
                   <p>React</p>
                   <p>Mongo</p>
                   <p>Node</p>
@@ -101,6 +92,7 @@ export default function Flip() {
             </div>
           </div>
         </div>
+
         <div className="cardThree" onClick={() => flipCardThree()}>
           <div className={`cardThree__inner ${flipThree ? "is-flipped" : ""}`}>
             <div className="card__face card__face--front">
@@ -122,6 +114,6 @@ export default function Flip() {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
