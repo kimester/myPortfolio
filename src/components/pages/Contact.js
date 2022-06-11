@@ -1,22 +1,26 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-
-    const handleFormSubmit = () => {
+    const form = useRef();
+;
+    const handleFormSubmit = (event) => {
+        event.preventDefault()
         // Preventing the default behavior of the form submit (which is to refresh the page)
         if (email && name && message) {
+
             const serviceID = "service_2bmlaq8"
             const templateID = "template_2zi5knz"
             const publicKey = "w5WVSJbF2wkkie5Tp"
             const templateParams = { name, email, message }
-            emailjs.send(serviceID, templateID, templateParams, publicKey)
-                .then(function (response) {
-                    alert("Your email was successfully sent!");
+
+            emailjs.sendForm(serviceID, templateID, form.current, publicKey)
+                .then((response) => {
+                    // alert("Your email was successfully sent!");
                     console.log('SUCCESS!', response.status, response.text);
                 }, function (error) {
                     console.log('FAILED...', error);
@@ -33,7 +37,8 @@ export default function Contact() {
         <div>
             <h1 className="text-light">Contact Me:</h1>
            
-            <form className="form" 
+            <form ref={form} className="form" 
+             onSubmit={handleFormSubmit}
             style={{
                 color:'black',
                 display:"flex", 
@@ -64,9 +69,7 @@ export default function Contact() {
                     type="text"
                     placeholder="Your Message"
                 />
-                <br/>
-                <br/>
-                <button style={{alignSelf:"center",width:"80%"}} type="button" onClick={handleFormSubmit}>
+                <button style={{alignSelf:"center",width:"80%"}} type="submit">
                     Submit
                 </button>
             </form>

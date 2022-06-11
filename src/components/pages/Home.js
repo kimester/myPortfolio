@@ -28,14 +28,7 @@ export default function Home() {
   return (
     <div className="homebox">
       <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-          justifyContent: "center",
-          marginRight: "2rem",
-          marginTop: 500,
-        }}
+  className="homebox-subcontainer"
       >
         <h1
           style={{
@@ -61,6 +54,8 @@ export default function Home() {
           A Web Developer with expreience in
         </h2>
       </div>
+      <div className='homebox-subcontainer'>
+
       <animated.div
         style={{
           border: "1px solid white",
@@ -73,7 +68,6 @@ export default function Home() {
           overflow: "auto",
           fontSize: "30px",
           color: "white",
-          marginTop: 520,
         }}
         scrollTop={scroll}
       >
@@ -86,6 +80,7 @@ export default function Home() {
           </div>
         ))}
       </animated.div>
+      </div>
     </div>
   );
 }

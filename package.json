@@ -19,7 +19,10 @@
     "web-vitals": "^2.1.4",
     "webfontloader": "^1.6.28"
   },
+  "homepage": "https://kimester.github.io/myPortfolio/",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
