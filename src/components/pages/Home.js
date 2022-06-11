@@ -58,14 +58,14 @@ export default function Home() {
 
       <animated.div
         style={{
-          border: "1px solid white",
+        
           color: "black",
           right: 200,
           fontFamily: "Questrial",
           bottom: 10,
           top: 350,
           height: 100,
-          overflow: "auto",
+          overflow: "hidden",
           fontSize: "30px",
           color: "white",
         }}
