@@ -32,17 +32,15 @@ export default function Contact() {
     return (
         <div>
             <h1 className="text-light">Contact Me:</h1>
-            {/* Review forms in React for this portion. Include an email form with a comment & name section */}
+           
             <form className="form" 
             style={{
                 color:'black',
                 display:"flex", 
                 flexDirection:"column",
-                // margin:0,
                 marginTop:"4%",
-                width:"60%",
-                
-                //  justifyContent:"center"
+                marginLeft:"20%",
+                width:"50%",
                  }}
                  >
                 <input className="text-black"
