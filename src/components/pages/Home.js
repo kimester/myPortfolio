@@ -35,18 +35,14 @@ export default function Home() {
           justifyContent: "center",
           marginRight: "2rem",
           marginTop: 500,
-          
         }}
       >
         <h1
-      
           style={{
             color: "white",
-            
-           
+
             fontFamily: "Noto Sans medium ",
             fontSize: 50,
-           
           }}
         >
           Hi, I'm Ester
@@ -54,12 +50,11 @@ export default function Home() {
         <h2
           className="header"
           style={{
-            
             fontFamily: "Noto Sans medium",
             height: 100,
-          
+
             color: "white",
-            textShadow: "grey"
+            textShadow: "grey",
           }}
         >
           {" "}
@@ -77,8 +72,8 @@ export default function Home() {
           height: 100,
           overflow: "auto",
           fontSize: "30px",
-          color:"white",
-marginTop:520,
+          color: "white",
+          marginTop: 520,
         }}
         scrollTop={scroll}
       >

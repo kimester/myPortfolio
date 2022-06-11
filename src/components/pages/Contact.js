@@ -40,7 +40,7 @@ export default function Contact() {
                 flexDirection:"column",
                 // margin:0,
                 marginTop:"4%",
-                width:"80%",
+                width:"60%",
                 
                 //  justifyContent:"center"
                  }}

@@ -11,4 +11,4 @@ return (
             <h3 className="text-light" style={{textAlign:"center"}}>Thanks for visiting</h3>
         </div>
   )
-}
+} 
